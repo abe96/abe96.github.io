@@ -1,0 +1,35 @@
+- role: Strength Coach and Sports Scientist
+  organization: University of Florida Athletics
+  time: Sep 2019 to Aug 2021
+  image: Work/Gators.png
+  alt: University of Florida Gators
+  stage: performance
+  summary: At Florida, I coached Division I football athletes and worked in sports science, which gave me a front-row view into how performance, recovery, and decision-making come together in elite environments.
+- role: Fitness Manager
+  organization: 24 Hour Fitness
+  time: Jun 2021 to Jul 2023
+  image: Work/24 h.jpg
+  alt: 24 Hour Fitness
+  stage: performance
+  summary: I ran a commercial gym for over two years, led customer growth, and discovered that I genuinely loved sales, business strategy, and the psychology behind why people commit to change.
+- role: Associate Research Scientist
+  organization: Google, Fitbit
+  time: Jul 2023 to Nov 2024
+  image: Work/google x fitbit.png
+  alt: Google and Fitbit
+  stage: products
+  summary: At Google and Fitbit, I worked on research connected to the Pixel Watch and learned how sensing systems can move from research ideas into products that people may depend on every day.
+- role: Research Engineer
+  organization: Singapore Management University
+  time: Jan 2025 to Aug 2025
+  image: Work/SMU.png
+  alt: Singapore Management University
+  stage: research
+  summary: I helped build real-time athlete tracking and performance systems, turning sensing and computer vision research into tools that coaches and teams could actually use.
+- role: PhD Candidate
+  organization: Singapore Management University
+  time: Aug 2025 to Present
+  image: Work/SMU.png
+  alt: Singapore Management University
+  stage: research
+  summary: I am now pursuing a PhD in Computer Science, building sensing systems for health and human performance with a long-term goal of improving care and support for ageing populations.

@@ -1,0 +1,14 @@
+outside_work:
+  lede: "Outside the lab, I am usually in one of two places: on the mats or at the piano."
+  body: Brazilian Jiu-Jitsu keeps me close to discipline, repetition, and performance under pressure. I have also been playing the piano since I was 6 and completed all 8 grades through Trinity College London, so when training slows down I usually end up making music.
+  highlights:
+    - Brazilian Jiu-Jitsu competitor
+    - Piano since age 6
+    - Trinity College London Grade 8
+how_i_work:
+  title: How I Work
+  body: "{placeholder} Add short notes, screenshots, or quotes that show how you communicate, collaborate, and think through problems."
+  placeholders:
+    - "{placeholder} Screenshot of a thoughtful research discussion"
+    - "{placeholder} Screenshot showing initiative, follow-through, or creative problem solving"
+    - "{placeholder} Screenshot showing humor or warmth in collaboration"

@@ -1,197 +1,271 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abraham Joseph | Portfolio</title>
-  <meta name="description" content="Abraham Joseph - PhD CS, Research Engineer." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Spectral:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="page">
-    <header class="hero reveal">
-      <div class="hero-main">
-        <h1>Abraham Joseph</h1>
-        <img class="avatar avatar--mobile" src="IMG_4797.jpg" alt="Abraham Joseph" />
-        <p class="lead">PhD CS | Research Engineer - Singapore</p>
-        <p class="summary">I am a PhD candidate in Computer Science at Singapore Management University, advised by Prof. <a href="https://faculty.smu.edu.sg/profile/rajesh-krishna-balan-591" target="_blank" rel="noreferrer">Rajesh Balan</a>. My work builds systems that turn data into insights for human performance.</p>
-        <p class="summary">I started as a strength coach for Division I football athletes at the University of Florida, moved into research at Google on the Pixel Watch, and now focus on human-centered AI to improve performance. My love for sports, being an athlete myself, and a problem-solving mindset led me here.</p>
-        <p class="summary quote">"Turning data into insights, and insights into action."</p>
-        <div class="quick-links">
-          <a class="icon-link" href="mailto:harold.j.2025@phdcs.smu.edu.sg" aria-label="Email">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2 8 5 8-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a class="icon-link" href="https://github.com/abe96" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.48c.5.1.68-.22.68-.48v-1.7c-2.77.6-3.35-1.18-3.35-1.18-.46-1.18-1.12-1.5-1.12-1.5-.9-.63.07-.62.07-.62 1 .08 1.52 1.03 1.52 1.03.9 1.52 2.36 1.08 2.93.83.1-.65.35-1.08.64-1.33-2.22-.25-4.56-1.12-4.56-5a3.9 3.9 0 0 1 1.04-2.7 3.6 3.6 0 0 1 .1-2.66s.85-.27 2.8 1.03a9.7 9.7 0 0 1 5.1 0c1.95-1.3 2.8-1.03 2.8-1.03.3.77.34 1.74.1 2.66a3.9 3.9 0 0 1 1.04 2.7c0 3.9-2.34 4.75-4.58 5 .36.32.68.94.68 1.9v2.8c0 .26.18.58.68.48A10 10 0 0 0 12 2z" fill="currentColor"/></svg>
-          </a>
-          <a class="icon-link" href="https://www.linkedin.com/in/abejoseph/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 8.98h3.96V21H3zM9.5 8.98H13v1.64h.05c.49-.94 1.7-1.93 3.5-1.93 3.74 0 4.44 2.46 4.44 5.66V21h-3.96v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9.5z" fill="currentColor"/></svg>
-          </a>
-          <a class="icon-link" href="https://scholar.google.com/citations?user=rplFipYAAAAJ&hl=en" target="_blank" rel="noreferrer" aria-label="Google Scholar">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm0 8.7L5.74 9 12 5.5 18.26 9 12 11.7zm0 2.6 7 3.8-7 3.8-7-3.8 7-3.8z" fill="currentColor"/></svg>
-          </a>
-        </div>
-      </div>
-      <aside class="hero-side">
-        <img class="avatar avatar--desktop" src="IMG_4797.jpg" alt="Abraham Joseph" />
-        <div class="side-block">
-          <p class="side-title">Currently</p>
-          <p class="side-body">Singapore Management University - PhD, Computer Science (Aug 2025)</p>
-        </div>
-        <div class="side-block">
-          <p class="side-title">Focus</p>
-          <p class="side-body">Building Systems to Monitor and Improve Athlete Performance</p>
-        </div>
-      </aside>
-    </header>
+---
+layout: default
+title: Abraham Joseph | Portfolio
+description: Abraham Joseph - PhD CS, Research Engineer.
+---
+<header class="hero reveal">
+  <div class="hero-main">
+    <p class="eyebrow">Research, Performance, Systems</p>
+    <h1>{{ site.data.profile.name }}</h1>
+    <img class="avatar avatar--mobile" src="{{ site.data.profile.photo | relative_url }}" alt="{{ site.data.profile.name }}" />
+    <p class="lead">{{ site.data.profile.title }}</p>
+    <p class="advisor-line">Advised by <a href="{{ site.data.profile.advisor_url }}" target="_blank" rel="noreferrer">Prof. {{ site.data.profile.advisor_name }}</a></p>
+    <div class="hero-copy">
+      {% for item in site.data.profile.summary %}
+        <p class="summary">{{ item }}</p>
+      {% endfor %}
+    </div>
+    {% if site.data.profile.quote %}
+      <p class="summary quote">"{{ site.data.profile.quote }}"</p>
+    {% endif %}
+    <div class="quick-links">
+      <a class="icon-link" href="mailto:{{ site.data.profile.email }}" aria-label="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2 8 5 8-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="icon-link" href="{{ site.data.profile.github }}" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.48c.5.1.68-.22.68-.48v-1.7c-2.77.6-3.35-1.18-3.35-1.18-.46-1.18-1.12-1.5-1.12-1.5-.9-.63.07-.62.07-.62 1 .08 1.52 1.03 1.52 1.03.9 1.52 2.36 1.08 2.93.83.1-.65.35-1.08.64-1.33-2.22-.25-4.56-1.12-4.56-5a3.9 3.9 0 0 1 1.04-2.7 3.6 3.6 0 0 1 .1-2.66s.85-.27 2.8 1.03a9.7 9.7 0 0 1 5.1 0c1.95-1.3 2.8-1.03 2.8-1.03.3.77.34 1.74.1 2.66a3.9 3.9 0 0 1 1.04 2.7c0 3.9-2.34 4.75-4.58 5 .36.32.68.94.68 1.9v2.8c0 .26.18.58.68.48A10 10 0 0 0 12 2z" fill="currentColor"/></svg>
+      </a>
+      <a class="icon-link" href="{{ site.data.profile.linkedin }}" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 8.98h3.96V21H3zM9.5 8.98H13v1.64h.05c.49-.94 1.7-1.93 3.5-1.93 3.74 0 4.44 2.46 4.44 5.66V21h-3.96v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9.5z" fill="currentColor"/></svg>
+      </a>
+      <a class="icon-link" href="{{ site.data.profile.scholar }}" target="_blank" rel="noreferrer" aria-label="Google Scholar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm0 8.7L5.74 9 12 5.5 18.26 9 12 11.7zm0 2.6 7 3.8-7 3.8-7-3.8 7-3.8z" fill="currentColor"/></svg>
+      </a>
+    </div>
+  </div>
+  <aside class="hero-side">
+    <img class="avatar avatar--desktop" src="{{ site.data.profile.photo | relative_url }}" alt="{{ site.data.profile.name }}" />
+    <div class="side-block">
+      <p class="side-title">{{ site.data.profile.current.label }}</p>
+      <p class="side-body">{{ site.data.profile.current.value }}</p>
+    </div>
+    <div class="side-block">
+      <p class="side-title">{{ site.data.profile.why_title }}</p>
+      <p class="side-body">{{ site.data.profile.why_body }}</p>
+    </div>
+  </aside>
+</header>
 
+<section class="journey reveal" aria-label="Story overview">
+  <p class="journey-kicker">From performance to products to health sensing</p>
+  <div class="journey-grid">
+    {% for item in site.data.profile.journal %}
+      <article class="journey-card">
+        <p class="journey-card__step">{{ item.step }}</p>
+        <h2 class="journey-card__title">{{ item.title }}</h2>
+        <p class="journey-card__body">{{ item.body }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<nav class="top-nav reveal" aria-label="Table of contents">
+  <a href="#research">Research</a>
+  <a href="#news">News</a>
+  <a href="#publications">Publications</a>
+  <a href="#experience">Path</a>
+  <a href="#education">Education</a>
+  <a href="#about">About</a>
+  <a href="#achievements">Achievements</a>
+</nav>
+
+<div class="content-shell">
+  <main class="content-main">
     <section id="research" class="section reveal">
-      <h2>Research Focus</h2>
+      <div class="section-header">
+        <div>
+          <h2>Focus Areas</h2>
+        </div>
+        <p class="section-copy">Systems, sensing, and interfaces for athlete performance and applied human-centered AI.</p>
+      </div>
       <ul class="pill-list">
-        <li>Machine Learning</li>
-        <li>Deep Learning</li>
-        <li>Human-Computer Interaction</li>
+        {% for item in site.data.research %}
+          <li>{{ item }}</li>
+        {% endfor %}
       </ul>
     </section>
 
-      <section id="news" class="section reveal">
-        <h2>News</h2>
-        <div class="news-grid">
-          <a class="news-card reveal" href="https://www.linkedin.com/feed/update/urn:li:activity:7418524922773282817/" target="_blank" rel="noreferrer">
-            <img class="news-card__image" src="gyss-demo.jpg" alt="Real-time Athlete Tracking with Commodity Phones demo" />
+    <section id="news" class="section reveal">
+      <div class="section-header">
+        <div>
+          <h2>News</h2>
+        </div>
+        <p class="section-copy">Selected demos, public appearances, and media coverage.</p>
+      </div>
+      <div class="news-grid">
+        {% for item in site.data.news %}
+          <a class="news-card reveal" href="{{ item.url }}" target="_blank" rel="noreferrer">
+            <img class="news-card__image" src="{{ item.image }}" alt="{{ item.alt }}" />
             <div class="news-card__body">
-              <span class="news-card__meta">Jan 2026 &middot; Lab Demo</span>
-              <h3 class="news-card__title">Mobile vision-Based Training Analysis for Elite Athletes</h3>
+              <span class="news-card__meta">{{ item.date }} &middot; {{ item.source }}</span>
+              <h3 class="news-card__title">{{ item.title }}</h3>
             </div>
           </a>
-          <a class="news-card reveal" href="https://www.linkedin.com/feed/update/urn:li:activity:7418524922773282817/" target="_blank" rel="noreferrer">
-            <img class="news-card__image" src="gyss-linkedin.jpg" alt="GYSS fireside chat with Jack Dongarra and Tim Hunt" />
-            <div class="news-card__body">
-              <span class="news-card__meta">Jan 6, 2026 &middot; GYSS</span>
-              <h3 class="news-card__title">Fireside chat host with Prof Jack Dongarra and Sir Tim Hunt</h3>
-          </div>
-        </a>
-        <a class="news-card reveal" href="https://www.sgaquatics.org.sg/singapore-aquatics-adopts-drone-technology-and-artificial-intelligence-in-training/" target="_blank" rel="noreferrer">
-          <img class="news-card__image" src="https://www.sgaquatics.org.sg/app/uploads/2025/03/WhatsApp-Image-2025-03-04-at-19.36.50-424x565.jpeg" alt="Singapore Aquatics adopts drone and AI analytics" />
-          <div class="news-card__body">
-            <span class="news-card__meta">Mar 20, 2025 &middot; Singapore Aquatics</span>
-            <h3 class="news-card__title">Singapore Aquatics adopts our drone technology in training</h3>
-          </div>
-        </a>
-        <a class="news-card reveal" href="https://news.smu.edu.sg/news/2025/03/04/smu-and-sutd-deploy-drone-and-ai-driven-analytics-improve-performance-national" target="_blank" rel="noreferrer">
-          <img class="news-card__image" src="https://news.smu.edu.sg/sites/news.smu.edu.sg/files/styles/max_325x325/public/smu/news/Drone-Point%20of%20view%20on%20swimmer%20doing%20backstroke%20%28Getty%20Images%29.jpg?itok=kILVycLp" alt="SMU and SUTD deploy drone and AI-driven analytics" />
-          <div class="news-card__body">
-            <span class="news-card__meta">Mar 4, 2025 &middot; SMU Newsroom</span>
-            <h3 class="news-card__title">Our Lab deploys drone and AI-driven analytics for national swimmers</h3>
-          </div>
-        </a>
+        {% endfor %}
       </div>
     </section>
 
     <section id="publications" class="section reveal">
-      <h2>Publications</h2>
-      <ul class="list">
-        <li>
-          <strong>Dronaquatics: Real-time Swimming Analytics Using Drone Captured Imagery</strong>
-          <span class="muted">WACV 2026</span>
-          <div class="muted">Thu Tran &middot; <strong>Harold Abraham Joseph</strong> &middot; Kichang Lee &middot; Kenny Choo &middot; Dong Ma &middot; Shaohui Foong &middot; Thivya Kandappu &middot; Jeonggil Ko &middot; Rajesh Balan</div>
-          <a class="inline-link" href="https://REPLACE_ME" target="_blank" rel="noreferrer">Paper</a>
-        </li>
-        <li>
-          <strong>Antibiotic Resistance in Biofilms</strong>
-          <span class="muted">Introduction to Biofilm Engineering</span>
-          <div class="muted">Sahana Vasudevan &middot; <strong>Harold Abraham Joseph</strong> &middot; Shogan Sugumar Swamy &middot; Adline Princy Solomon*</div>
-          <a class="inline-link" href="https://pubs.acs.org/doi/abs/10.1021/bk-2019-1323.ch010" target="_blank" rel="noreferrer">Paper</a>
-        </li>
-      </ul>
+      <div class="section-header">
+        <div>
+          <h2>Publications</h2>
+        </div>
+        <p class="section-copy">A growing body of work across applied computer vision and bioengineering.</p>
+      </div>
+      <div class="publication-grid">
+        {% for item in site.data.publications %}
+          <article class="publication-card">
+            <p class="publication-card__venue">{{ item.venue }}</p>
+            <h3 class="publication-card__title">{{ item.title }}</h3>
+            <p class="publication-card__authors">{{ item.authors | replace: 'Harold Abraham Joseph', '<strong>Harold Abraham Joseph</strong>' }}</p>
+            <a class="inline-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Paper</a>
+          </article>
+        {% endfor %}
+      </div>
     </section>
 
     <section id="experience" class="section reveal">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="timeline-entry left">
-          <div class="timeline-card">
-            <p class="timeline-role"><strong>PhD Candidate</strong>, Singapore Management University</p>
-            <p class="timeline-time">Aug 2025 to Present</p>
-          </div>
+      <div class="section-header">
+        <div>
+          <h2>From Field To Lab</h2>
         </div>
-        <div class="timeline-entry right">
-          <div class="timeline-card">
-            <p class="timeline-role"><strong>Research Engineer</strong>, Singapore Management University</p>
-            <p class="timeline-time">Jan 2025 to Aug 2025</p>
+        <p class="section-copy">A path from coaching and sports science into industry research and doctoral work.</p>
+      </div>
+      {% assign performance_items = site.data.experience | where: "stage", "performance" | reverse %}
+      {% assign product_items = site.data.experience | where: "stage", "products" | reverse %}
+      {% assign research_items = site.data.experience | where: "stage", "research" | reverse %}
+      <div class="path-grid">
+        <section class="path-stage">
+          <div class="path-stage__header">
+            <h3 class="path-stage__title">Research And Doctoral Work</h3>
+            <p class="path-stage__body">Where I now build systems for health, performance, and ageing populations.</p>
           </div>
-        </div>
-        <div class="timeline-entry left">
-          <div class="timeline-card">
-            <p class="timeline-role"><strong>Associate Research Scientist</strong>, Google, Fitbit</p>
-            <p class="timeline-time">Jul 2023 to Nov 2024</p>
+          <div class="path-stage__entries">
+            {% for item in research_items %}
+              <article class="path-entry">
+                <div class="path-entry__mark">
+                  <img class="path-entry__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" />
+                </div>
+                <div class="path-entry__content">
+                  <p class="path-entry__time">{{ item.time }}</p>
+                  <h4 class="path-entry__role">{{ item.role }}</h4>
+                  <p class="path-entry__org">{{ item.organization }}</p>
+                  <p class="path-entry__summary">{{ item.summary }}</p>
+                </div>
+              </article>
+            {% endfor %}
           </div>
-        </div>
-        <div class="timeline-entry right">
-          <div class="timeline-card">
-            <p class="timeline-role"><strong>Sports Scientist</strong>, University of Florida</p>
-            <p class="timeline-time">Sep 2019 to Aug 2021</p>
+        </section>
+        <section class="path-stage">
+          <div class="path-stage__header">
+            <h3 class="path-stage__title">Wearables And Products</h3>
+            <p class="path-stage__body">Where sensing became something people could actually use, wear, and depend on.</p>
           </div>
-        </div>
+          <div class="path-stage__entries">
+            {% for item in product_items %}
+              <article class="path-entry">
+                <div class="path-entry__mark">
+                  <img class="path-entry__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" />
+                </div>
+                <div class="path-entry__content">
+                  <p class="path-entry__time">{{ item.time }}</p>
+                  <h4 class="path-entry__role">{{ item.role }}</h4>
+                  <p class="path-entry__org">{{ item.organization }}</p>
+                  <p class="path-entry__summary">{{ item.summary }}</p>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+        <section class="path-stage">
+          <div class="path-stage__header">
+            <h3 class="path-stage__title">Coaching And Performance</h3>
+            <p class="path-stage__body">Where I learned to think about people, pressure, recovery, and behavior in the real world.</p>
+          </div>
+          <div class="path-stage__entries">
+            {% for item in performance_items %}
+              <article class="path-entry">
+                <div class="path-entry__mark">
+                  <img class="path-entry__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" />
+                </div>
+                <div class="path-entry__content">
+                  <p class="path-entry__time">{{ item.time }}</p>
+                  <h4 class="path-entry__role">{{ item.role }}</h4>
+                  <p class="path-entry__org">{{ item.organization }}</p>
+                  <p class="path-entry__summary">{{ item.summary }}</p>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
       </div>
     </section>
 
     <section id="education" class="section reveal">
-      <h2>Education</h2>
-      <div class="timeline">
-        <div class="timeline-entry left">
-          <div class="timeline-card">
-            <p class="timeline-role"><strong>Singapore Management University</strong></p>
-            <p class="timeline-time">PhD, Computer Science (Aug 2025)</p>
-          </div>
+      <div class="section-header">
+        <div>
+          <h2>Education</h2>
         </div>
-        <div class="timeline-entry right">
-          <div class="timeline-card">
-            <p class="timeline-role"><strong>University of Florida</strong></p>
-            <p class="timeline-time">MS, Applied Physiology and Kinesiology - Human Performance (2019 - 2021)</p>
-          </div>
-        </div>
-        <div class="timeline-entry left">
-          <div class="timeline-card">
-            <p class="timeline-role"><strong>SASTRA Deemed University</strong></p>
-            <p class="timeline-time">MS, Bioengineering and Medical Nanotechnology (2014 - 2019)</p>
-          </div>
-        </div>
+        <p class="section-copy">Training across engineering, human performance, and computer science.</p>
+      </div>
+      <div class="education-grid">
+        {% for item in site.data.education %}
+          <article class="education-card reveal">
+            <img class="education-card__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" />
+            <div class="education-card__body">
+              <h3 class="education-card__school">{{ item.school }}</h3>
+              <p class="education-card__detail">{{ item.detail }}</p>
+            </div>
+          </article>
+        {% endfor %}
       </div>
     </section>
 
+    <section id="about" class="section reveal">
+      <div class="section-header">
+        <div>
+          <h2>A Little About Me</h2>
+        </div>
+        <p class="section-copy">A little more about how I spend time and what keeps me grounded outside the lab.</p>
+      </div>
+      <article class="about-story">
+        <p class="about-story__paragraph">{{ site.data.about.outside_work.lede }}</p>
+        <p class="about-story__body">{{ site.data.about.outside_work.body }}</p>
+        <ul class="about-highlights">
+          {% for item in site.data.about.outside_work.highlights %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </article>
+    </section>
+
     <section id="achievements" class="section reveal">
-      <h2>Sport Achievements</h2>
-      <ul class="list">
-        <li><strong>Copa de Singapura</strong> - Gold- Jiu-Jitsu, Blue Belt, Open Class</li>
-        <li><strong>Grappling Industries</strong> - Bronze- Jiu-Jitsu, White Belt, Adult 195lb Divison</li>
-        <li><strong>Grappling Industries</strong> - Bronze- Jiu-Jitsu, White Belt, Adult 215lb Divison</li>
-      </ul>
+      <div class="section-header">
+        <div>
+          <h2>BJJ Tournaments</h2>
+        </div>
+        <p class="section-copy">Competitive results that continue to shape how I think about performance and training.</p>
+      </div>
+      <div class="achievement-grid">
+        {% for item in site.data.achievements %}
+          <article class="achievement-card reveal">
+            <img class="achievement-card__image" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" />
+            <div class="achievement-card__body">
+              <h3 class="achievement-card__title">{{ item.title }}</h3>
+              <p class="achievement-card__detail">{{ item.detail }}</p>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
     </section>
 
     <footer class="footer">
+      <div class="final-cta">
+        <h2>Interested in working together?</h2>
+        <p>I am always happy to talk about research, collaboration, and opportunities where rigorous systems work can create real-world impact.</p>
+        <a class="button button--primary" href="{{ site.data.profile.secondary_cta.url }}">{{ site.data.profile.secondary_cta.label }}</a>
+      </div>
       <p>Built for abe96.github.io</p>
     </footer>
-  </div>
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const revealItems = document.querySelectorAll(".reveal");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("reveal--visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.2, rootMargin: "0px 0px -8% 0px" }
-      );
-      revealItems.forEach((item) => observer.observe(item));
-    });
-  </script>
-</body>
-</html>
+  </main>
+</div>
