@@ -8,15 +8,15 @@ photo: IMG_4797.jpg
 advisor_name: Rajesh Balan
 advisor_url: https://faculty.smu.edu.sg/profile/rajesh-krishna-balan-591
 summary:
-  - I build sensing systems for health and human performance, with a long-term goal of improving how we monitor, support, and care for the silver generation.
-  - I am a PhD candidate in Computer Science at Singapore Management University. Before that, I coached Division I football athletes at the University of Florida and worked on sensing research at Google and Fitbit, experiences that shaped how I think about turning data into practical decisions.
+  - I build sensing systems for health and human performance, with the long-term goal of improving how we monitor, support, and care for the silver generation.
+  - Currently, I am a PhD candidate in Computer Science at Singapore Management University. Before that, I coached Division I football athletes at the University of Florida and worked on sensing research at Google and Fitbit, experiences that shaped how I think about turning data into practical decisions.
 journal:
   - step: "01"
     title: Performance
     body: Started in coaching and sports science, learning what people need when performance and recovery decisions have to work in the real world.
   - step: "02"
     title: Wearables
-    body: At Google and Fitbit, I saw how sensing research becomes products people may rely on every day.
+    body: At Google and Fitbit, I saw how sensing research becomes products people rely on every day.
   - step: "03"
     title: Health Sensing
     body: Now I am building systems aimed at more proactive care, healthier independence, and better support for ageing populations.
@@ -33,7 +33,7 @@ focus:
   label: Focus
   value: Building sensing systems for health, performance, and ageing populations
 why_title: Why This Matters
-why_body: Populations are ageing everywhere, and the people who need the most support are often the least continuously monitored. Better sensing systems can help detect decline earlier, support healthier independence, reduce caregiver burden, and make healthcare more proactive instead of reactive.
+why_body: Populations are ageing everywhere, and the people who need the most support are the least continuously monitored. Better sensing systems can help detect decline earlier, support healthier independence, reduce caregiver burden, and make healthcare more proactive instead of reactive.
 proof_points:
   - WACV 2026 publication
   - Featured on Channel 8 Singapore
