@@ -67,6 +67,7 @@ description: Abraham Joseph - PhD CS, Research Engineer.
   <a href="#education">Education</a>
   <a href="#about">About</a>
   <a href="#achievements">Achievements</a>
+  <a href="#product">Products</a>
 </nav>
 
 <div class="content-shell">
@@ -257,6 +258,29 @@ description: Abraham Joseph - PhD CS, Research Engineer.
           </article>
         {% endfor %}
       </div>
+    </section>
+
+    <section id="product" class="section reveal">
+      <div class="section-header">
+        <div>
+          <h2>{{ site.data.product.kicker }}</h2>
+        </div>
+        <p class="section-copy">A small product experiment where coaching, combat sports, and systems thinking meet.</p>
+      </div>
+      <article class="product-card">
+        <img class="product-card__thumb" src="{{ site.data.product.image | relative_url }}" alt="{{ site.data.product.alt }}" />
+        <div class="product-card__body">
+          <p class="product-card__eyebrow">Built From My Past And My Passion</p>
+          <h3 class="product-card__title">{{ site.data.product.title }}</h3>
+          <p class="product-card__text">{{ site.data.product.body }}</p>
+          <ul class="product-highlights">
+            {% for item in site.data.product.highlights %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          <a class="button button--primary" href="{{ site.data.product.url }}" target="_blank" rel="noreferrer">{{ site.data.product.cta_label }}</a>
+        </div>
+      </article>
     </section>
 
     <footer class="footer">
