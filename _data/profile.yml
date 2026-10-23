@@ -7,6 +7,15 @@ scholar: https://scholar.google.com/citations?user=rplFipYAAAAJ&hl=en
 photo: IMG_4797.jpg
 advisor_name: Rajesh Balan
 advisor_url: https://faculty.smu.edu.sg/profile/rajesh-krishna-balan-591
+committee_title: Thesis Committee
+committee:
+  - name: Rajesh Balan
+    role: Chair
+    url: https://faculty.smu.edu.sg/profile/rajesh-krishna-balan-591
+  - name: Thivya Kandappu
+    url: https://www.thivyak.info/
+  - name: Dongyao Chen
+    url: https://chendy.tech/
 summary:
   - I build sensing systems for health and human performance, with the long-term goal of improving how we monitor, support, and care for the silver generation.
   - Currently, I am a PhD candidate in Computer Science at Singapore Management University. Before that, I coached Division I football athletes at the University of Florida and worked on sensing research at Google and Fitbit, experiences that shaped how I think about turning data into practical decisions.

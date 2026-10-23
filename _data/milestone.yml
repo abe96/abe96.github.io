@@ -1,0 +1,12 @@
+kicker: Milestone
+date: Oct 21, 2026
+title: Passed my PhD Qualifying Exam
+talk: Towards Practical Real-time Sensing Systems for Fine-Grained Exercise Analysis
+body: "I presented this work to my thesis committee. It brings together the two sides of my research: sports HCI studies of how coaches use sports-science tools, and real-time camera-based systems for fine-grained exercise tracking."
+photos:
+  - image: QE/qe-committee.jpg
+    alt: Abraham with his thesis committee in front of the Qualifying Exam title slide
+  - image: QE/qe-title-slide.jpg
+    alt: Abraham at the start of his Qualifying Exam with the title slide on screen
+  - image: QE/qe-research-focus.jpg
+    alt: Abraham presenting his research focus on sports HCI and real-time camera-based exercise tracking

@@ -40,6 +40,14 @@ description: Abraham Joseph - PhD CS, Research Engineer.
       <p class="side-body">{{ site.data.profile.current.value }}</p>
     </div>
     <div class="side-block">
+      <p class="side-title">{{ site.data.profile.committee_title }}</p>
+      <ul class="committee-list">
+        {% for person in site.data.profile.committee %}
+          <li><a href="{{ person.url }}" target="_blank" rel="noreferrer">{{ person.name }}</a>{% if person.role %} <span class="committee-list__role">({{ person.role }})</span>{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="side-block">
       <p class="side-title">{{ site.data.profile.why_title }}</p>
       <p class="side-body">{{ site.data.profile.why_body }}</p>
     </div>
@@ -93,10 +101,35 @@ description: Abraham Joseph - PhD CS, Research Engineer.
         </div>
         <p class="section-copy">Selected demos, public appearances, and media coverage.</p>
       </div>
+      {% assign milestone = site.data.milestone %}
+      {% if milestone %}
+        <article id="milestone" class="milestone">
+          <div class="milestone__text">
+            <p class="milestone__meta">{{ milestone.kicker }} &middot; {{ milestone.date }}</p>
+            <h3 class="milestone__title">{{ milestone.title }}</h3>
+            <p class="milestone__talk">{{ milestone.talk }}</p>
+            <p class="milestone__body">{{ milestone.body }}</p>
+          </div>
+          <div class="milestone__gallery">
+            {% for photo in milestone.photos %}
+              <a class="milestone__photo" href="{{ photo.image | relative_url }}" target="_blank" rel="noreferrer">
+                <img src="{{ photo.image | relative_url }}" alt="{{ photo.alt }}" loading="lazy" />
+              </a>
+            {% endfor %}
+          </div>
+        </article>
+      {% endif %}
       <div class="news-grid">
         {% for item in site.data.news %}
-          <a class="news-card reveal" href="{{ item.url }}" target="_blank" rel="noreferrer">
-            <img class="news-card__image" src="{{ item.image }}" alt="{{ item.alt }}" />
+          <a class="news-card reveal" href="{{ item.url }}"{% if item.url contains '://' %} target="_blank" rel="noreferrer"{% endif %}>
+            {% if item.image %}
+              <img class="news-card__image" src="{{ item.image }}" alt="{{ item.alt }}" loading="lazy" />
+            {% else %}
+              <div class="news-card__cover{% if item.cover_tone %} news-card__cover--{{ item.cover_tone }}{% endif %}" aria-hidden="true">
+                <span class="news-card__cover-title">{{ item.cover }}</span>
+                <span class="news-card__cover-detail">{{ item.cover_detail }}</span>
+              </div>
+            {% endif %}
             <div class="news-card__body">
               <span class="news-card__meta">{{ item.date }} &middot; {{ item.source }}</span>
               <h3 class="news-card__title">{{ item.title }}</h3>
@@ -111,15 +144,20 @@ description: Abraham Joseph - PhD CS, Research Engineer.
         <div>
           <h2>Publications</h2>
         </div>
-        <p class="section-copy">A growing body of work across applied computer vision and bioengineering.</p>
+        <p class="section-copy">A growing body of work across HCI, computer vision, computing education, and bioengineering.</p>
       </div>
       <div class="publication-grid">
         {% for item in site.data.publications %}
           <article class="publication-card">
-            <p class="publication-card__venue">{{ item.venue }}</p>
+            <div class="publication-card__meta">
+              <p class="publication-card__venue">{{ item.venue }}</p>
+              {% if item.status %}<span class="status-chip">{{ item.status }}</span>{% endif %}
+            </div>
             <h3 class="publication-card__title">{{ item.title }}</h3>
             <p class="publication-card__authors">{{ item.authors | replace: 'Harold Abraham Joseph', '<strong>Harold Abraham Joseph</strong>' }}</p>
-            <a class="inline-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Paper</a>
+            {% if item.url %}
+              <a class="inline-link" href="{{ item.url }}" target="_blank" rel="noreferrer">Paper</a>
+            {% endif %}
           </article>
         {% endfor %}
       </div>
@@ -145,7 +183,7 @@ description: Abraham Joseph - PhD CS, Research Engineer.
             {% for item in research_items %}
               <article class="path-entry">
                 <div class="path-entry__mark">
-                  <img class="path-entry__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" />
+                  <img class="path-entry__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" loading="lazy" />
                 </div>
                 <div class="path-entry__content">
                   <p class="path-entry__time">{{ item.time }}</p>
@@ -166,7 +204,7 @@ description: Abraham Joseph - PhD CS, Research Engineer.
             {% for item in product_items %}
               <article class="path-entry">
                 <div class="path-entry__mark">
-                  <img class="path-entry__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" />
+                  <img class="path-entry__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" loading="lazy" />
                 </div>
                 <div class="path-entry__content">
                   <p class="path-entry__time">{{ item.time }}</p>
@@ -187,7 +225,7 @@ description: Abraham Joseph - PhD CS, Research Engineer.
             {% for item in performance_items %}
               <article class="path-entry">
                 <div class="path-entry__mark">
-                  <img class="path-entry__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" />
+                  <img class="path-entry__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" loading="lazy" />
                 </div>
                 <div class="path-entry__content">
                   <p class="path-entry__time">{{ item.time }}</p>
@@ -212,7 +250,7 @@ description: Abraham Joseph - PhD CS, Research Engineer.
       <div class="education-grid">
         {% for item in site.data.education %}
           <article class="education-card reveal">
-            <img class="education-card__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" />
+            <img class="education-card__logo" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" loading="lazy" />
             <div class="education-card__body">
               <h3 class="education-card__school">{{ item.school }}</h3>
               <p class="education-card__detail">{{ item.detail }}</p>
@@ -250,7 +288,7 @@ description: Abraham Joseph - PhD CS, Research Engineer.
       <div class="achievement-grid">
         {% for item in site.data.achievements %}
           <article class="achievement-card reveal">
-            <img class="achievement-card__image" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" />
+            <img class="achievement-card__image" src="{{ item.image | relative_url }}" alt="{{ item.alt }}" loading="lazy" />
             <div class="achievement-card__body">
               <h3 class="achievement-card__title">{{ item.title }}</h3>
               <p class="achievement-card__detail">{{ item.detail }}</p>
@@ -268,7 +306,7 @@ description: Abraham Joseph - PhD CS, Research Engineer.
         <p class="section-copy">A small product experiment where coaching, combat sports, and systems thinking meet.</p>
       </div>
       <article class="product-card">
-        <img class="product-card__thumb" src="{{ site.data.product.image | relative_url }}" alt="{{ site.data.product.alt }}" />
+        <img class="product-card__thumb" src="{{ site.data.product.image | relative_url }}" alt="{{ site.data.product.alt }}" loading="lazy" />
         <div class="product-card__body">
           <p class="product-card__eyebrow">Built From My Past And My Passion</p>
           <h3 class="product-card__title">{{ site.data.product.title }}</h3>
