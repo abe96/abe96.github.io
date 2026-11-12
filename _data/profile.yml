@@ -1,56 +1,34 @@
+# Who you are. Used by the header, hero, contact section, footer and link previews.
 name: Abraham Joseph
-title: Strength Coach, Sports Scientist, and PhD Candidate in Computer Science
-email: harold.j.2025@phdcs.smu.edu.sg
-github: https://github.com/abe96
-linkedin: https://www.linkedin.com/in/abejoseph/
-scholar: https://scholar.google.com/citations?user=rplFipYAAAAJ&hl=en
+full_name: Harold Abraham Joseph   # bolded automatically in publication author lists
+role: "PhD Candidate in Computer Science · Singapore Management University"
+statement: "I build real-time sensing systems that measure how people move, train, and recover — shaped by years of coaching elite athletes and competing on the mats myself."
 photo: IMG_4797.jpg
-advisor_name: Rajesh Balan
+email: harold.j.2025@phdcs.smu.edu.sg
+advisor_name: Prof. Rajesh Balan
 advisor_url: https://faculty.smu.edu.sg/profile/rajesh-krishna-balan-591
-committee_title: Thesis Committee
-committee:
-  - name: Rajesh Balan
-    role: Chair
-    url: https://faculty.smu.edu.sg/profile/rajesh-krishna-balan-591
-  - name: Thivya Kandappu
-    url: https://www.thivyak.info/
-  - name: Dongyao Chen
-    url: https://chendy.tech/
-summary:
-  - I build sensing systems for health and human performance, with the long-term goal of improving how we monitor, support, and care for the silver generation.
-  - Currently, I am a PhD candidate in Computer Science at Singapore Management University. Before that, I coached Division I football athletes at the University of Florida and worked on sensing research at Google and Fitbit, experiences that shaped how I think about turning data into practical decisions.
-journal:
-  - step: "01"
-    title: Performance
-    body: Started in coaching and sports science, learning what people need when performance and recovery decisions have to work in the real world.
-  - step: "02"
-    title: Wearables
-    body: At Google and Fitbit, I saw how sensing research becomes products people rely on every day.
-  - step: "03"
-    title: Health Sensing
-    body: Now I am building systems aimed at more proactive care, healthier independence, and better support for ageing populations.
-primary_cta:
-  label: View News And Research
-  url: "#news"
-secondary_cta:
-  label: Contact Me
-  url: "mailto:harold.j.2025@phdcs.smu.edu.sg"
-current:
-  label: Current Position
-  value: Singapore Management University - PhD, Computer Science (Aug 2025)
-focus:
-  label: Focus
-  value: Building sensing systems for health, performance, and ageing populations
-why_title: Why This Matters
-why_body: Populations are ageing everywhere, and the people who need the most support are the least continuously monitored. Better sensing systems can help detect decline earlier, support healthier independence, reduce caregiver burden, and make healthcare more proactive instead of reactive.
-proof_points:
-  - WACV 2026 publication
-  - Featured on Channel 8 Singapore
-  - Google and Fitbit research
-  - Competitive Jiu-Jitsu athlete
-worked_with:
-  - Singapore Management University
-  - Google
-  - Fitbit
-  - University of Florida
-  - SASTRA
+
+# When your CV is ready, put the PDF in this folder and set e.g.  cv: cv.pdf
+# A "CV" button then appears next to "Email me". Leave empty to hide it.
+cv: ""
+
+links:
+  - label: Google Scholar
+    short: Scholar
+    url: https://scholar.google.com/citations?user=rplFipYAAAAJ&hl=en
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/abejoseph/
+  - label: GitHub
+    url: https://github.com/abe96
+
+instagram_handle: "@abejoseph_"
+instagram_url: https://www.instagram.com/abejoseph_/
+
+# The thin strip under the intro
+proof:
+  - label: Published at
+    value: "WACV · IJHCI · SIGCSE"
+  - label: Featured on
+    value: "Channel 8 · SMU Newsroom · Singapore Aquatics"
+  - label: Previously
+    value: "Google · Fitbit · Florida Gators Athletics"

@@ -1,0 +1,25 @@
+# "Selected work" in the Research section. Published work only.
+# fit: cover   -> image fills the frame (photos)
+# fit: contain -> whole image shown on white (diagrams)
+
+- venue: "WACV 2026"
+  title: "Dronaquatics: Real-time Swimming Analytics Using Drone Captured Imagery"
+  summary: "Real-time analytics from drone-captured video of swimmers, now used by Singapore Aquatics in national-team training."
+  image: Research/dronaquatics-fig1.jpg
+  alt: "Four overhead drone frames of swimmers with pose keypoints drawn on them (Figure 1 of the Dronaquatics paper)"
+  fit: cover
+  links:
+    - label: Paper
+      url: https://openaccess.thecvf.com/content/WACV2026/papers/Tran_Dronaquatics_Real-time_Swimming_Analytics_Using_Drone_Captured_Imagery_WACV_2026_paper.pdf
+    - label: Singapore Aquatics story
+      url: https://www.sgaquatics.org.sg/singapore-aquatics-adopts-drone-technology-and-artificial-intelligence-in-training/
+
+- venue: "IJHCI 2026"
+  title: "Elite Strength and Conditioning Coaches as First-Line Users of Sports-Science Technology"
+  summary: "Elite strength and conditioning coaches are the first-line users of sports-science technology. This paper looks at how they use, and work around, dashboards when decisions are time-constrained."
+  image: Research/ijhci-pipeline.png
+  alt: "Pipeline from the paper: the strength coach or sports scientist manually cleans data, manually aggregates it, then visualizes it"
+  fit: contain
+  links:
+    - label: Paper
+      url: https://www.tandfonline.com/doi/full/10.1080/10447318.2026.2756629

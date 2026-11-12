@@ -1,12 +1,25 @@
-- title: Copa de Singapura
-  detail: Gold - Jiu-Jitsu, Blue Belt, Open Class
+# "03 — On the mats". Newest first.
+
+- result: "Purple belt"
+  event: "Brazilian Jiu-Jitsu"
+  detail: "Latest promotion"
+  image: Comp/purple-belt.jpg
+  alt: "Abraham with his new purple belt on the mats"
+
+- result: Gold
+  event: "Copa de Singapura"
+  detail: "Blue belt · Open class"
   image: Comp/Copa.jpg
-  alt: Copa de Singapura medal podium photo
-- title: Grappling Industries
-  detail: Bronze - Jiu-Jitsu, White Belt, Adult Mid-Heavy Division
-  image: Comp/GI- Oct.jpg
-  alt: Grappling Industries October competition photo
-- title: Grappling Industries
-  detail: Bronze - Jiu-Jitsu, White Belt, Adult Heavy Division
+  alt: "On the podium at Copa de Singapura"
+
+- result: Bronze
+  event: "Grappling Industries"
+  detail: "White belt · Adult mid-heavy"
+  image: "Comp/GI- Oct.jpg"
+  alt: "Holding a bronze medal at Grappling Industries"
+
+- result: Bronze
+  event: "Grappling Industries"
+  detail: "White belt · Adult heavy"
   image: Comp/GI-Feb.JPG
-  alt: Grappling Industries February competition photo
+  alt: "On the podium at Grappling Industries"

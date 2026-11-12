@@ -1,0 +1,54 @@
+# Section copy for the homepage, top to bottom.
+
+nav:
+  - label: Research
+    target: research
+  - label: Publications
+    target: publications
+  - label: My Story
+    target: story
+  - label: Contact
+    target: contact
+
+research:
+  kicker: "01 — Research"
+  title: "Deploying Practical Systems"
+  intro: "Coaches and clinicians make fast decisions with imperfect data. I study how they actually use sports-science technology, and build camera- and drone-based systems that track movement in real time, with the long-term goal of helping older adults stay active and independent."
+  thesis:
+    label: "PhD thesis · in progress"
+    title: "Towards Practical Real-time Sensing Systems for Fine-Grained Exercise Analysis"
+    summary: "Brings together sports-HCI studies of how coaches use sports-science tools and real-time camera-based systems for fine-grained exercise tracking."
+    milestone: "Qualifying exam passed"
+    date: "21 Oct 2026"
+    photo: QE/qe-research-focus.jpg
+    alt: "Abraham presenting his research focus at his qualifying exam, with the slides on two screens"
+    committee:
+      - name: Rajesh Balan
+        role: chair
+        url: https://faculty.smu.edu.sg/profile/rajesh-krishna-balan-591
+      - name: Thivya Kandappu
+        url: https://www.thivyak.info/
+      - name: Dongyao Chen
+        url: https://chendy.tech/
+
+coaching:
+  kicker: "02 — Coaching"
+  title: "I come from the gym floor"
+  body: "At Florida I coached Division I football players and worked as a sports scientist, and I still coach today. That's where my research focus comes from. I am building low-cost systems that can actually be deployed, and that tell people something useful about how they move."
+  photos:
+    - image: Coaching/uf-weight-room.jpg
+      alt: "A coaching session with interns in the Florida Gators weight room"
+      caption: "In the weight room at Florida."
+    - image: Coaching/uf-intern-presentation.jpg
+      alt: "Abraham giving his intern presentation, with the title slide on screen"
+      caption: "My intern presentation at Florida."
+      position: "50% 63%"   # keeps the slide and you in frame when cropped
+
+athlete:
+  kicker: "03 — On the mats"
+  title: "Still an athlete."
+  body: "I train and compete in Brazilian Jiu-Jitsu, and I recently got my purple belt. The mats keep me close to discipline, repetition, and performance under pressure. Those are the things my research tries to measure."
+
+contact:
+  title: "Let's talk."
+  body: "I'm always happy to talk about research, collaboration, and opportunities in sensing, mobile systems, and sports and health technology."
